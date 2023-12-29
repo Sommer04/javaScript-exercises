@@ -1,0 +1,17 @@
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum > endNum){
+    return[];
+  }
+  else {
+    const resultarray = rangeOfNumbers(startNum,endNum-1);
+    //in this recursion line code above what does is when then
+    //function is in the conditional statement if, it evaluates
+    // if  startNum ( in this case 1) is greater than endNum (in this case 5), so it goes on and on in the recursion until endNum  gets 1
+    // and then the conditional statement startNum and endNum becomes iqual 1 , 0 so it returns the empty array and then goes to the other //memory space that allocates the result of the function of the resultarray
+//use this link to visualize step by step of the code https://pythontutor.com/render.html#mode=display
+     resultarray.push(endNum);
+     return resultarray
+  }
+};
+
+console.log(rangeOfNumbers(1, 5) )
